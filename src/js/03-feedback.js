@@ -10,10 +10,12 @@ if (localStorage.getItem(FORM_STORAGE_KEY)) {
   const message = parsedStorageObj.message;
 
   if (email) {
+    formObj.email = email;
     formEl.elements.email.value = email;
   }
 
   if (message) {
+    formObj.message = message;
     formEl.elements.message.value = message;
   }
 }
