@@ -1,13 +1,13 @@
 // Add imports above this line
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-const gallery = document.querySelector(".gallery");
+const gallery = document.querySelector('.gallery');
 const galleryImages = makeGalleryImages(galleryItems);
 
-gallery.insertAdjacentHTML("beforeend", galleryImages);
+gallery.insertAdjacentHTML('beforeend', galleryImages);
 
 function makeGalleryImages(galleryItems) {
   return galleryItems
@@ -23,12 +23,12 @@ function makeGalleryImages(galleryItems) {
     </a>
   </div>`
     )
-    .join("");
+    .join('');
 }
 
 //Lightbox Gallery
-let galleryLightbox = new SimpleLightbox(".gallery a", {
-  captionsData: "alt",
+let galleryLightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
-galleryLightbox.on("show.simplelightbox");
+galleryLightbox.on('show.simplelightbox');

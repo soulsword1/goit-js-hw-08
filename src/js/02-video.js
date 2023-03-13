@@ -14,18 +14,16 @@ function getWatchedTime(data) {
   localStorage.setItem(LOCAL_WATCHED_VIDEO_KEY, watchedTime);
 }
 
-player
-  .setCurrentTime(currentWatchedTime)
-  .catch(function (error) {
-    switch (error.name) {
-      case 'RangeError':
-        // the time was less than 0 or greater than the video’s duration
-        console.log(error.name);
-        break;
+player.setCurrentTime(currentWatchedTime).catch(function (error) {
+  switch (error.name) {
+    case 'RangeError':
+      // the time was less than 0 or greater than the video’s duration
+      console.log(error.name);
+      break;
 
-      default:
-        // some other error occurred
-        console.log(error.name);
-        break;
-    }
-  });
+    default:
+      // some other error occurred
+      console.log(error.name);
+      break;
+  }
+});

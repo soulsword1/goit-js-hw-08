@@ -31,12 +31,12 @@ function onFormInput(e) {
   localStorage.setItem(FORM_STORAGE_KEY, stringifiedFormObj);
 }
 
-function onFormSubmit(e){
-    e.preventDefault();
-    const parsedStorageObj = JSON.parse(localStorage.getItem(FORM_STORAGE_KEY));
-    console.log(parsedStorageObj);
-    localStorage.removeItem(FORM_STORAGE_KEY);
-    
-    e.target.reset();
-    formObj = {};
+function onFormSubmit(e) {
+  e.preventDefault();
+  const parsedStorageObj = JSON.parse(localStorage.getItem(FORM_STORAGE_KEY));
+  console.log(parsedStorageObj);
+  localStorage.removeItem(FORM_STORAGE_KEY);
+
+  e.target.reset();
+  formObj = {};
 }
