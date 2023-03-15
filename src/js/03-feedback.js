@@ -34,6 +34,9 @@ function onFormInput(e) {
 }
 
 function onFormSubmit(e) {
+    console.log(formObj.email);
+    console.log(formObj.message);
+    if(formObj.email && formObj.message){
   e.preventDefault();
   const parsedStorageObj = JSON.parse(localStorage.getItem(FORM_STORAGE_KEY));
   console.log(parsedStorageObj);
@@ -41,4 +44,5 @@ function onFormSubmit(e) {
 
   e.target.reset();
   formObj = {};
+    }
 }
