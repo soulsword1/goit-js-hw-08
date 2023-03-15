@@ -31,4 +31,3 @@ let galleryLightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-galleryLightbox.on('show.simplelightbox');
